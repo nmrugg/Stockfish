@@ -60,6 +60,7 @@ Value Eval::evaluate(const Eval::NNUE::Networks&    networks,
     assert(!pos.checkers());
 
     bool smallNet = use_smallnet(pos);
+    smallNet = false;
     int  v;
 
     auto [psqt, positional] = smallNet ? networks.small.evaluate(pos, &caches.small)
